@@ -1,4 +1,3 @@
-Set-Content -Path .\test\weth-dos-test.js -Value @'
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
@@ -39,6 +38,6 @@ describe("WETH9 transfer gas-stipend DoS reproducer", function () {
     }
 
     expect(reverted).to.equal(true);
-    expect(revertMessage.toLowerCase()).to.include("gas") ; // grobe Prüfung auf related message
+    expect(revertMessage.toLowerCase()).to.include("gas");
   });
 });
